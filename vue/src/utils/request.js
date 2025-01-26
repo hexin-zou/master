@@ -1,6 +1,6 @@
 import axios from 'axios'
-import router from "@/router";
 import Cookies from 'js-cookie'
+import router from "@/router";
 
 const request = axios.create({
     baseURL: 'http://localhost:9090/api',

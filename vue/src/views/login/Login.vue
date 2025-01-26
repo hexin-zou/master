@@ -62,7 +62,7 @@ export default {
         if (valid) {
           request.post('/admin/login', this.admin).then(res => {
             if (res.code === '200') {
-              this.loginAdmin = res.data  // 滑块组件就出现了
+              this.loginAdmin = res.data
             } else {
               this.$notify.error(res.msg)
             }
@@ -70,7 +70,7 @@ export default {
         }
       })
     },
-    onSuccess() { // 滑块验证通过之后触发的
+    onSuccess() {
       Cookies.set('admin', JSON.stringify(this.loginAdmin))
       this.$notify.success("登录成功")
       this.$router.push('/')

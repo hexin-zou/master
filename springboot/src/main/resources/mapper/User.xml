@@ -17,10 +17,10 @@
     <delete id="deleteById">
         delete from user where id = #{id}
     </delete>
-
     <select id="list" resultType="com.example.springboot.entity.User">
         select * from user
     </select>
+
 
     <select id="listByCondition" resultType="com.example.springboot.entity.User">
         select * from user

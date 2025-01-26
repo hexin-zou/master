@@ -100,7 +100,7 @@ public class AdminService implements IAdminService {
         BeanUtils.copyProperties(admin, loginDTO);
 
         // 生成token
-        String token = TokenUtils.genToken(String.valueOf(admin.getId()), admin.getPassword());
+        String token = TokenUtils.genToken(String.valueOf(admin.getId()), admin.getPassword(), 15);
         loginDTO.setToken(token);
         return loginDTO;
     }

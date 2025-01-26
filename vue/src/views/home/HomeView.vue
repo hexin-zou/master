@@ -1,13 +1,5 @@
 <template>
   <div>
-    <el-card style="margin: 20px 0; font-size: 18px">
-      <div style="margin-bottom: 10px">
-        B站关注：程序员青戈，手把手带你做毕设！
-      </div>
-     <div style="margin: 10px">
-       毕设、课设项目定制加up微信：xia_qing2012。代码纯手撸，安全靠谱！
-     </div>
-    </el-card>
     <div style="margin: 20px 0">
       <el-select class="input" v-model="timeRange" placeholder="请选择" @change="load">  <!--  从后台加载最新的数据 -->
         <el-option

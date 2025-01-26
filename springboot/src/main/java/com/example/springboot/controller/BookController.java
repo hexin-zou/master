@@ -38,7 +38,8 @@ public class BookController {
         long flag = System.currentTimeMillis();
         String filePath = BASE_FILE_PATH + flag + "_" + originalFilename;
         try {
-            FileUtil.mkParentDirs(filePath);  // 创建父级目录
+            FileUtil.mkParentDirs(filePath);
+            // 创建父级目录
             file.transferTo(FileUtil.file(filePath));
             Admin currentAdmin = TokenUtils.getCurrentAdmin();
             String token = TokenUtils.genToken(currentAdmin.getId().toString(), currentAdmin.getPassword(), 15);
